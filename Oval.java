@@ -16,7 +16,10 @@ public class Oval extends Shape{
 	}
 	public void draw(Graphics grpahics)
 	{
-		
+		if(isFilled())
+		{
+			
+		}
 	}
 	
 	}
