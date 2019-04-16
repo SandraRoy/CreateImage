@@ -12,6 +12,7 @@ public class Oval extends Shape{
       diameter1=d1;
       diameter2=d2;
      location=new Point[1];
+     location[0]=pointUL;
 	}
 	
 	
