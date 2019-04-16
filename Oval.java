@@ -14,6 +14,9 @@ public class Oval extends Shape{
      location=new Point[1];
      location[0]=pointUL;
 	}
-	
+	public void draw(Graphics grpahics)
+	{
+		
+	}
 	
 	}
