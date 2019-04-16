@@ -14,11 +14,11 @@ public class Oval extends Shape{
      location=new Point[1];
      location[0]=pointUL;
 	}
-	public void draw(Graphics grpahics)
+	public void draw(Graphics graphics)
 	{
 		if(isFilled())
 		{
-			
+		graphics.fillOval(location[0].x,location[0].y, diameter1, diameter2);
 		}
 	}
 	
