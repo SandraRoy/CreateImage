@@ -18,7 +18,11 @@ public class Oval extends Shape{
 	{
 		if(isFilled())
 		{
-		graphics.fillOval(location[0].x,location[0].y, diameter1, diameter2);
+			graphics.fillOval(location[0].x,location[0].y, diameter1, diameter2);
+		}
+		else
+		{
+			graphics.drawOval(location[0].x,location[0].y, diameter1, diameter2);
 		}
 	}
 	
