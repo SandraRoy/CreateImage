@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>TestShapes.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">TestShapes (Apr 16, 2019 11:29:11 PM)</a> &gt; <a href="../../index.html" class="el_group">lab 10</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">TestShapes.java</span></div><h1>TestShapes.java</h1><pre class="source lang-java linenums">import java.awt.Color;
+import java.awt.Point;
+import org.junit.Assert;
+import org.junit.Test;
+<span class="fc" id="L5">public class TestShapes {</span>
+	
+
+
+
+<span class="fc" id="L10">	Square s = new Square(new Point(20,20), 400, Color.CYAN, true);</span>
+<span class="fc" id="L11">	Rectangle r = new Rectangle(new Point(20,20), 400,500, Color.BLUE, true);</span>
+<span class="fc" id="L12">	RightTriangle r1 = new RightTriangle(new Point(20,20), 500, 400, Color.BLUE, true);</span>
+<span class="fc" id="L13">	IsoscelesTriangle I = new IsoscelesTriangle(new Point(20,20), 400,500, Color.WHITE, true);</span>
+
+
+	@Test
+	
+	public void RectangleTests()//tests for rectangle lass and its base classes   
+	{
+
+
+<span class="fc" id="L22">	Point[] points = new Point[4];</span>
+<span class="fc" id="L23">	points[0] = new Point(20,20);</span>
+<span class="fc" id="L24">	points[1] = new Point(10,20);</span>
+<span class="fc" id="L25">	points[2] = new Point(10,10);</span>
+<span class="fc" id="L26">	points[3] = new Point(20,10);</span>
+<span class="fc" id="L27">	Assert.assertEquals(&quot;incorrect color&quot;, Color.CYAN, s.getColor());</span>
+<span class="fc" id="L28">	Assert.assertEquals(&quot;incorrect value&quot;, true, s.isFilled());</span>
+<span class="nc" id="L29">	Assert.assertEquals(&quot;incorrect location&quot;, points, s.getLocation());</span>
+
+	
+<span class="nc" id="L32">	Point[] points1 = new Point[4];</span>
+<span class="nc" id="L33">	points1[0] = new Point(20,20);</span>
+<span class="nc" id="L34">	points1[1] = new Point(20,30);</span>
+<span class="nc" id="L35">	points1[2] = new Point(30,30);</span>
+<span class="nc" id="L36">	points1[3] = new Point(30,20);</span>
+<span class="nc" id="L37">	Assert.assertEquals(&quot;incorrect color&quot;, Color.BLUE, r.getColor());</span>
+<span class="nc" id="L38">	Assert.assertEquals(&quot;incorrect value&quot;, true, r.isFilled());</span>
+<span class="nc" id="L39">	Assert.assertEquals(&quot;incorrect location&quot;, points1, r.getLocation());</span>
+<span class="nc" id="L40">	}</span>
+	@Test
+	public void TriangleTests()  // tests for triangle class and its base classes 
+	{
+		
+<span class="fc" id="L45">		Point[] points = new Point[3];</span>
+<span class="fc" id="L46">		points[0] = new Point(20,20);</span>
+<span class="fc" id="L47">		points[1] = new Point(30,20);</span>
+<span class="fc" id="L48">		points[2] = new Point(20,10);</span>
+<span class="fc" id="L49">		Assert.assertEquals(&quot;Incorrect color&quot;, Color.BLUE, r1.getColor());</span>
+<span class="fc" id="L50">		Assert.assertEquals(&quot;Incorrect value&quot;, true, r1.isFilled());</span>
+<span class="nc" id="L51">		Assert.assertEquals(&quot;Incorrect location&quot;, points, r1.getLocation());</span>
+
+		
+<span class="nc" id="L54">		Point[] points1 = new Point[3];</span>
+<span class="nc" id="L55">		points1[0] = new Point(20,20);</span>
+<span class="nc" id="L56">		points1[1] = new Point(30,20);</span>
+<span class="nc" id="L57">		points1[2] = new Point(25,10);</span>
+<span class="nc" id="L58">		Assert.assertEquals(&quot;Color not correct&quot;, Color.WHITE, I.getColor());</span>
+<span class="nc" id="L59">		Assert.assertEquals(&quot;filled not correct&quot;, true, I.isFilled());</span>
+<span class="nc" id="L60">		Assert.assertEquals(&quot;Incorrect location&quot;, points1, I.getLocation());</span>
+
+
+<span class="nc" id="L63">		}</span>
+	}
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span>TestShapes (Apr 16, 2019 11:29:11 PM)</div></body></html>

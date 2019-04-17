@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>Oval.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">TestShapes (Apr 16, 2019 11:29:11 PM)</a> &gt; <a href="../../index.html" class="el_group">lab 10</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Oval.java</span></div><h1>Oval.java</h1><pre class="source lang-java linenums">import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Point;
+
+public class Oval extends Shape{
+	private int diameter1;
+	private int diameter2;
+
+	public Oval(Point pointUL, int d1, int d2, Color color, boolean filled)//constructor
+	{
+<span class="nc" id="L11">      super(color, filled);</span>
+<span class="nc" id="L12">      diameter1=d1;</span>
+<span class="nc" id="L13">      diameter2=d2;</span>
+<span class="nc" id="L14">     location=new Point[1];</span>
+<span class="nc" id="L15">     location[0]=pointUL;</span>
+<span class="nc" id="L16">	}</span>
+	public int  getDiameter1()//returns diameter
+	{
+<span class="nc" id="L19">		 return diameter1;</span>
+	}
+	public int getDiameter2()
+	{
+<span class="nc" id="L23">		return diameter2;</span>
+	}
+	public void draw(Graphics graphics)
+	{
+<span class="nc" id="L27">		graphics.setColor(getColor());</span>
+<span class="nc bnc" id="L28" title="All 2 branches missed.">		if(isFilled())</span>
+		{
+<span class="nc" id="L30">			graphics.fillOval(location[0].x,location[0].y, diameter1, diameter2);</span>
+<span class="nc" id="L31">		}</span>
+		else
+		{
+<span class="nc" id="L34">			graphics.drawOval(location[0].x,location[0].y, diameter1, diameter2);</span>
+		}
+<span class="nc" id="L36">	}</span>
+	
+	}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span>TestShapes (Apr 16, 2019 11:29:11 PM)</div></body></html>

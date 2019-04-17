@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../jacoco-resources/report.gif" type="image/gif"/><title>DrawFrame.java</title><link rel="stylesheet" href="../../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">TestShapes (Apr 16, 2019 11:29:11 PM)</a> &gt; <a href="../../index.html" class="el_group">lab 10</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">DrawFrame.java</span></div><h1>DrawFrame.java</h1><pre class="source lang-java linenums">import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Point;
+
+import javax.swing.JFrame;
+
+public class DrawFrame extends JFrame {
+	private static DrawPanel drawPanel;
+	public DrawFrame(String title)
+	{
+<span class="nc" id="L11">		super(title);</span>
+<span class="nc" id="L12">		setSize(new Dimension(600,600));</span>
+		
+<span class="nc" id="L14">		drawPanel=new DrawPanel();</span>
+<span class="nc" id="L15">		add(drawPanel);</span>
+		
+<span class="nc" id="L17">     	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span>
+<span class="nc" id="L18">		setVisible(true);</span>
+		
+		// create the shapes
+<span class="nc" id="L21">		IsoscelesTriangle roof=new IsoscelesTriangle(new Point(200,300),140, 150,Color.RED, true);</span>
+<span class="nc" id="L22">		Square base = new Square(new Point(200,300),140,Color.YELLOW, true);</span>
+<span class="nc" id="L23">		Rectangle door=new Rectangle (new Point(250,440), 50,80, Color.RED, true);</span>
+<span class="nc" id="L24">		Circle pane =new Circle(new Point(250, 220),50,Color.WHITE, true);</span>
+<span class="nc" id="L25">		Rectangle riv=new Rectangle(new Point(0,560),600,80,Color.BLUE, true);</span>
+<span class="nc" id="L26">		Sinusoid river=new Sinusoid(Color.WHITE,new Point(0,520),600,3,18);</span>
+<span class="nc" id="L27">		Sinusoid river1=new Sinusoid(Color.WHITE,new Point(0,530),600,3,18);</span>
+<span class="nc" id="L28">		Oval body=new Oval(new Point (400,100),  100,  80, Color.orange, true);</span>
+<span class="nc" id="L29">		Circle eye =new Circle(new Point(420, 130),10,Color.BLACK, true);</span>
+<span class="nc" id="L30">		Circle eye1 =new Circle(new Point(480, 130),10,Color.BLACK, true);</span>
+<span class="nc" id="L31">		Sinusoid s=new Sinusoid(Color.BLACK,new Point(380,200),1,7,18);</span>
+<span class="nc" id="L32">		Diamond wing=new Diamond(new Point (300,120),90, Color.yellow,true);</span>
+<span class="nc" id="L33">		Diamond wing1=new Diamond(new Point (490,120),90, Color.yellow,true);</span>
+<span class="nc" id="L34">		RightTriangle g=new RightTriangle(new Point (0,480), 40, 70, Color.GREEN, true);</span>
+<span class="nc" id="L35">		RightTriangle g1=new RightTriangle(new Point (40,480), 40, 70, Color.GREEN, true);</span>
+<span class="nc" id="L36">		PolyLine p=new PolyLine(new Point(200,440), new Point(340,440), 50, Color.CYAN, true);</span>
+<span class="nc" id="L37">		RightTriangle g2=new RightTriangle(new Point (510,480), 40, 70, Color.GREEN, true);</span>
+<span class="nc" id="L38">		RightTriangle g3=new RightTriangle(new Point (550,480), 40, 70, Color.GREEN, true);</span>
+		// Add the shapes
+<span class="nc" id="L40">		drawPanel.addShape(roof);</span>
+<span class="nc" id="L41">		drawPanel.addShape(base);</span>
+<span class="nc" id="L42">		drawPanel.addShape(door);</span>
+<span class="nc" id="L43">		drawPanel.addShape(pane);</span>
+<span class="nc" id="L44">		drawPanel.addShape(riv);</span>
+<span class="nc" id="L45">		drawPanel.addShape(river);</span>
+<span class="nc" id="L46">		drawPanel.addShape(river1);</span>
+<span class="nc" id="L47">		drawPanel.addShape(g);</span>
+<span class="nc" id="L48">		drawPanel.addShape(g1);</span>
+<span class="nc" id="L49">		drawPanel.addShape(body);</span>
+<span class="nc" id="L50">		drawPanel.addShape(wing);</span>
+<span class="nc" id="L51">		drawPanel.addShape(wing1);</span>
+<span class="nc" id="L52">		drawPanel.addShape(eye);</span>
+<span class="nc" id="L53">		drawPanel.addShape(eye1);</span>
+<span class="nc" id="L54">		drawPanel.addShape(s);</span>
+<span class="nc" id="L55">		drawPanel.addShape(p);</span>
+<span class="nc" id="L56">		drawPanel.addShape(g2);</span>
+<span class="nc" id="L57">		drawPanel.addShape(g3);</span>
+		
+<span class="nc" id="L59">	}</span>
+	
+	public static void main(String[] args)
+	{
+<span class="nc" id="L63">		DrawFrame obj =new DrawFrame(&quot;Scene&quot;);</span>
+<span class="nc" id="L64">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.1.201803210924</span>TestShapes (Apr 16, 2019 11:29:11 PM)</div></body></html>

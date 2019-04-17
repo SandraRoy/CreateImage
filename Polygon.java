@@ -9,7 +9,7 @@ public class Polygon extends Shape
 	}
 	public void draw(Graphics graphics)
 	{
-		int[] xPoints=new int[location.length];	
+		int[] xPoints = new int[location.length];	
 		int [] yPoints=new int[location.length];
 
 		for(int i=0;i<location.length;i++)
