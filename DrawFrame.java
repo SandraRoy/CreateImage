@@ -62,7 +62,7 @@ public class DrawFrame extends JFrame {
 	public static void main(String[] args) throws IOException
 	{
 		DrawFrame obj =new DrawFrame("Scene");
-		PanelToImage.makePanelPNGImage(drawPanel, "SandraRoy_Image.png");
+		PanelToImage.makePanelPNGImage(drawPanel, "Sandra Roy Image.png");
 	}
 
 }
